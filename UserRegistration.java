@@ -41,11 +41,24 @@ public class UserRegistration
 			System.out.println("Last name is invalid Enter the valid first name ");
 	}
 	
+	//UC3 "Added: Check User Email ID is valid or not "
+	public static void checkEmailId()
+	{
+		String emailid;
+		System.out.println();
+		System.out.println("Enter User Email Id : ");
+		emailid = inputUserValue();
+		boolean check_Emailid = Pattern.matches("[a-zA-z]{1,}[.]?[a-zA-z]{1,}?[@]+[a-zA-z]{1,}[.]+[a-z]{1,}[.]?[a-z]{1,}?",emailid);
+		if(check_Emailid == true)
+			System.out.println("User Email ID is : " +emailid);
+		else
+			System.out.println("Email id is invalid Enter the valid first name ");
 	
-	
+	}
 	public static void main(String[] args)
 	{
 		checkfirstName();
 		checklastName();
+		checkEmailId();
 	}
 }
