@@ -27,11 +27,25 @@ public class UserRegistration
 			System.out.println("First name is invalid Enter the valid first name ");
 	}
 	
+	//UC2: "Adding : Check user last name is valid or not "
+	public static void checklastName()
+	{
+		String lastName;
+		System.out.println();
+		System.out.println("Enter Last Name of user: ");
+		lastName = inputUserValue();
+		boolean check_LastName = Pattern.matches("[A-Z]+[a-z]{3,}",lastName);
+		if(check_LastName == true)
+			System.out.println("Last name is : " +lastName);
+		else
+			System.out.println("Last name is invalid Enter the valid first name ");
+	}
+	
 	
 	
 	public static void main(String[] args)
 	{
 		checkfirstName();
-		
+		checklastName();
 	}
 }
