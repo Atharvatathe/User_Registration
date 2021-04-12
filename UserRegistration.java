@@ -71,14 +71,14 @@ public class UserRegistration
 	
 	}
 	
-	//UC5 "Added: Check password Rule 1 - Minimum 8 character "
+	//"Added: Check password Rule 3 - Should have atleast 1 Numeric Number "
 	public static void checkPassword()
 	{
 		String password;
 		System.out.println();
 		System.out.println("Enter User password : ");
 		password = inputUserValue();
-		boolean check_password = Pattern.matches("[a-zA-z]{8,}",password);
+		boolean check_password = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]){8,}$",password);
 		if(check_password == true)
 			System.out.println("User password is : " +password);
 		else
@@ -90,10 +90,10 @@ public class UserRegistration
 	
 	public static void main(String[] args)
 	{
-		//checkfirstName();
-		//checklastName();
-		//checkEmailId();
-		//checkMobileNo();
+		checkfirstName();
+		checklastName();
+		checkEmailId();
+		checkMobileNo();
 		checkPassword();
 	}
 }
