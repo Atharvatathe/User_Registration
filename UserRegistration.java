@@ -71,7 +71,7 @@ public class UserRegistration
 	
 	}
 	
-	//UC5 "Added: Check password Rule 1 - Minimum 8 character "
+	//UC6 "Added: Check password Rule 2 - Should have atleast 1 upper case "
 	public static void checkPassword()
 	{
 		String password;
